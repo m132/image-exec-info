@@ -1,0 +1,6 @@
+option('efi-libdir', type : 'string',
+       description : 'path to the EFI lib directory')
+option('efi-includedir', type : 'string', value : '/usr/include/efi',
+       description : 'path to the EFI header directory')
+option('efi-arch', type : 'string',
+       description : 'override the auto-detected host architecture')
