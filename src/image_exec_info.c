@@ -8,9 +8,12 @@
 typedef UINT32 EFI_IMAGE_EXECUTION_ACTION;
 
 typedef struct {
+    /* XXX: possibly aligned */
     EFI_IMAGE_EXECUTION_ACTION Action;
     UINT32 InfoSize;
     /* CHAR16 Name[]; */
+
+    /* types below assume unaligned access */
     /* EFI_DEVICE_PATH_PROTOCOL DevicePath; */
     /* EFI_SIGNATURE_LIST Signature; */
 } EFI_IMAGE_EXECUTION_INFO;
