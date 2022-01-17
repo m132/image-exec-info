@@ -96,7 +96,7 @@ ListImageExecInfoTable (IN EFI_IMAGE_EXECUTION_INFO_TABLE *Table)
 
         DevicePathStr = DevicePathToStr(Proxy.DevicePath);
         Print(L"%EImage %u:%N\r\n"
-               "  Device: %D\r\n"
+               "  Device: %s\r\n"
                "    Name: %s\r\n"
                "   State: %s%s\r\n",
               Index, 
