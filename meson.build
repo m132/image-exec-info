@@ -59,7 +59,7 @@ if efi_libdir == ''
         cmd = run_command(cc.cmd_array() + ['-print-multi-os-directory'])
         if cmd.returncode() == 0
             path = '/usr/lib' / cmd.stdout().strip()
-            cmd = run_command(env, 'realpath', '-e', path)
+            cmd = run_command('env', 'realpath', '-e', path)
             if cmd.returncode() == 0
                 efi_libdir = cmd.stdout().strip()
             endif
